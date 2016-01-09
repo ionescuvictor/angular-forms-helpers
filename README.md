@@ -1,3 +1,3 @@
 # angular-forms-helpers
 
-This is something where i will various FormsController helpers or directives..
+This is something where i will put various FormsController helpers or directives..
