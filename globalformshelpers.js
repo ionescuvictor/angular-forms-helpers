@@ -1,21 +1,20 @@
-  function ngSetAllFieldsDirty (form) {
-	  
-        angular.forEach(form, function (input) {
-            if (typeof input !== 'undefined' && input.hasOwnProperty('$viewValue'))
-            {
-                input.$setDirty();
-                input.$setTouched();
-            }
-               
-        });
-		
-    }
+var MyFormsHelpers = {
 	
-     function ngSetAllFieldsPristine (form) {
-       
-        angular.forEach(form, function (input) {
-            if (typeof input !== 'undefined' && input.hasOwnProperty('$viewValue'))
-                input.$setPristine();
-        });
+	ngSetAllFieldsDirty: function (form) {	  
+		angular.forEach(form, function (input) {
+		    if (typeof input !== 'undefined' && input.hasOwnProperty('$viewValue'))
+		    {
+			input.$setDirty();
+			input.$setTouched();
+		    }
+        }),
+	ngSetAllFieldsPristine: function (form) {       
+		angular.forEach(form, function (input) {
+		    if (typeof input !== 'undefined' && input.hasOwnProperty('$viewValue'))
+			input.$setPristine();
+		});
+	}
 		
     }
+		
+ 
